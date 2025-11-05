@@ -137,6 +137,8 @@
 
 (leaf treemacs
   :ensure t
+  :custom
+  (treemacs-is-never-other-window . t)
   :bind
   ("<f8>" . treemacs)
   (:treemacs-mode-map
