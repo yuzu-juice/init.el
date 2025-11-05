@@ -109,7 +109,6 @@
     (add-hook 'magit-post-refresh-hook #'diff-hl-magit-post-refresh)
     (add-hook 'magit-post-commit-hook #'diff-hl-update)))
 
-
 ;; 現在位置表示
 (column-number-mode t)
 
