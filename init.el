@@ -53,7 +53,8 @@
   (set-cursor-color "#F79428")
   ;; UTF-8を優先
   (prefer-coding-system 'utf-8)
-
+  ;; コンパイル時に自動スクロール
+  (setq compilation-scroll-output t)
   :bind (("C-t" . delete-window)
          ("C-h" . delete-backward-char)))
 
