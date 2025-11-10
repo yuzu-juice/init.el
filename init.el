@@ -147,7 +147,11 @@
   :ensure t
   :global-minor-mode t
   :custom
-  ((wakatime-cli-path . "/opt/homebrew/bin/wakatime-cli")))
+  `((wakatime-cli-path . ,(cond ((eq system-type 'darwin) ; for macOS
+                                "/opt/homebrew/bin/wakatime-cli")
+                               ((eq system-type 'gnu/linux) ; for Linux
+                                "~/.wakatime/wakatime-cli")
+                               (t nil))))) ; other
 
 ;;;
 ;;; icons
@@ -190,3 +194,20 @@
    ("C-h" . delete-backward-char)))
 
 ;;; init.el ends here
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(beacon blackout company diff-hl doom-modeline doom-themes el-get
+	    gcmh hydra leaf-keywords lsp-mode lsp-ui magit mozc
+	    nerd-icons projectile puni treemacs treemacs-magit
+	    treemacs-nerd-icons treemacs-projectile undo-tree
+	    wakatime-mode)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
