@@ -182,6 +182,8 @@
   (require-final-newline . t)
   ;; 起動時に最後に開いていたファイルを開く
   (desktop-save-mode . 1)
+  ;; バッファの自動リフレッシュ
+  (global-auto-revert-mode . 1)
   :config
   ;; カーソルの色を変更
   (set-cursor-color "#F79428")
