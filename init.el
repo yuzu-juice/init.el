@@ -7,7 +7,7 @@
 ;; byte compile warning 非表示
 (setq byte-compile-warnings nil)
 
-;; <leaf-install-code>
+;; <leaf-install-code> test
 (eval-and-compile
   (customize-set-variable
    'package-archives '(("org" . "https://orgmode.org/elpa/")
