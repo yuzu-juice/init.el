@@ -117,16 +117,6 @@
   (add-hook 'projectile-after-switch-project-hook
             #'treemacs-display-current-project-exclusively))
 
-;; Icons
-(use-package nerd-icons
-  :ensure t)
-
-(use-package treemacs-nerd-icons
-  :ensure t
-  :after (treemacs nerd-icons)
-  :config
-  (treemacs-nerd-icons-config))
-
 ;; Other Packages
 (use-package mozc
   :ensure t
